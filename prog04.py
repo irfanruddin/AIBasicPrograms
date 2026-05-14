@@ -1,15 +1,13 @@
-import heapq 
- 
+""" program 4 """   
+import heapq  
 def a_star(graph, start, goal, heuristic):     
     open_list = []     
     heapq.heappush(open_list, (0, start)) 
-     
     g_cost = {start: 0} 
     parent = {start: None} 
      
     while open_list: 
         current_f, current_node = heapq.heappop(open_list) 
-         
         if current_node == goal:            
             path = []             
             while current_node: 
@@ -19,13 +17,11 @@ def a_star(graph, start, goal, heuristic):
          
         for neighbour, cost in graph[current_node]:             
             new_g = g_cost[current_node] + cost 
-             
             if neighbour not in g_cost or new_g < g_cost[neighbour]: 
                 g_cost[neighbour] = new_g                 
                 f_value = new_g + heuristic[neighbour]                 
                 heapq.heappush(open_list, (f_value, neighbour))                 
                 parent[neighbour] = current_node 
-     
     return None 
 graph = { 
     'A': [('B', 1), ('C', 3)], 
@@ -43,11 +39,8 @@ heuristic = {
     'E': 1, 
     'F': 0 
 } 
- 
 start_node = 'A' 
 goal_node = 'F' 
- 
 path,cost = a_star(graph, start_node, goal_node, heuristic) 
- 
 print("Shortest Path:", " -> ".join(path)) 
 print("Total cost :",cost)

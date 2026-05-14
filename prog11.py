@@ -1,3 +1,5 @@
+
+""" Program 11 """
 import math 
  
 # Alpha-Beta function 
@@ -17,7 +19,7 @@ def alphabeta(depth, nodeIndex, maximizingPlayer, values, alpha, beta):
             # Beta Cut-off             
             if beta <= alpha: 
                 break         
-            return maxEval 
+        return maxEval 
     else: 
         minEval = math.inf         
         for i in range(2): 
@@ -28,7 +30,7 @@ def alphabeta(depth, nodeIndex, maximizingPlayer, values, alpha, beta):
             # Alpha Cut-off             
             if beta <= alpha: 
                 break         
-            return minEval 
+        return minEval 
  
  
 # Leaf node values (example game tree) 

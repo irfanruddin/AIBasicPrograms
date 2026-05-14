@@ -1,4 +1,6 @@
-from collections import deque # Check if state is valid 
+
+""" Program 13 """
+from collections import deque 
 def is_valid(m_left, c_left, m_right, c_right):     
     if (m_left < 0 or c_left < 0 or m_right < 0 or c_right < 0): 
         return False     
@@ -9,11 +11,9 @@ def is_valid(m_left, c_left, m_right, c_right):
     if (m_right > 0 and m_right < c_right): 
         return False     
     return True 
-def bfs(): 
-    # (m_left, c_left, boat, m_right, c_right)     
+def bfs():    
     start = (3, 3, 0, 0, 0)     
     goal = (0, 0, 1, 3, 3) 
- 
     queue = deque([(start, [])])     
     visited = set() 
  
@@ -26,8 +26,7 @@ def bfs():
         visited.add(state)         
         if state == goal: 
             return path + [state] 
- 
-        # Possible moves         
+         
         moves = [(1,0),(2,0),(0,1),(0,2),(1,1)] 
  
         for m, c in moves: 
@@ -40,7 +39,6 @@ def bfs():
  
             if is_valid(*new_state[:2], *new_state[3:]):                 
                 queue.append((new_state, path + [state])) 
- 
     return None 
 solution = bfs() 
 print("Solution Steps:") 

@@ -1,7 +1,9 @@
+""" Program 6 """
+
 board = [" "] * 9   
  
 def display():     
-    print("\n")     
+    #print("\n")     
     print(board[0], "|", board[1], "|", board[2])     
     print("--+---+--")     
     print(board[3], "|", board[4], "|", board[5])     
@@ -34,8 +36,7 @@ for turn in range(9):
             display()             
             print("Player", player, "wins!") 
             break 
-         
-        # Switch player         
+                
         player = "O" if player == "X" else "X"     
     else: 
             print("Invalid move! Try again.") 

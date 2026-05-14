@@ -1,4 +1,5 @@
 
+""" Program 16 """
 facts = { 
     "Man(Socrates)" 
 } 

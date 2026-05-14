@@ -1,6 +1,9 @@
+
+""" program 3 """
+
 def dfs(graph, node, visited):     
     if node not in visited:         
-        print(node, end=" ") 
+        print(node, end="  ") 
         visited.add(node) 
          
         for neighbour in graph[node]:             

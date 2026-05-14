@@ -1,12 +1,14 @@
+""" Program 10 """
+
 monkey_position = "door" 
 box_position = "window" 
 banana_position = "center" 
 monkey_on_box = False 
 has_banana = False 
 print("Initial State:") 
-print("Monkey at:", monkey_position) 
-print("Box at:", box_position) 
-print("Banana at:", banana_position) 
+print("Monkey at -", monkey_position) 
+print("Box at -", box_position) 
+print("Banana at -", banana_position) 
 print() 
  
 # Step 1: Monkey goes to box 
@@ -26,3 +28,6 @@ print("Monkey climbs the box")
 if monkey_on_box and box_position == banana_position: 
     has_banana = True     
     print("Monkey grabs the banana 🍌") 
+print()
+print("goal state reached.")
+print("Has banana:",has_banana)

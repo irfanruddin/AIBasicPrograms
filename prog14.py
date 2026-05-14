@@ -1,4 +1,6 @@
- 
+
+
+""" Program 14 """ 
 def objective(x): 
     return -x**2 + 4*x   # Maximum at x = 2 
  

@@ -1,6 +1,6 @@
-# Simple Forward Chaining Implementation  
-# Knowledge Base (Rules) # Format: (conditions, conclusion) 
 
+""" Program 15 """
+# Simple Forward Chaining Implementation  
 rules = [ 
     (["A", "B"], "C"), 
     (["C"], "D"), 
